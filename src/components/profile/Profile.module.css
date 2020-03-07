@@ -3,16 +3,13 @@
     background: burlywood;
 }
 
-.profile .div img {
+.profile img {
   width: 1000px;
+  height: 300px;
 
 }
 
 .ava img {
-
-}
-
-.item
-{
-    color: red;
+width: 100px;
+    height: 100px;
 }

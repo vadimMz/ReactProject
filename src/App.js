@@ -8,9 +8,9 @@ import Profile from "./components/profile/Profile";
 function App() {
     return (
         <div className='app-wrapper'>
-            <Header/>
-            <Nav/>
-            <Profile/>
+           <Header/>
+           <Nav/>
+           <Profile/>
         </div>
     );
 }
