@@ -1,0 +1,18 @@
+.profile {
+    grid-area: c;
+    background: burlywood;
+}
+
+.profile .div img {
+  width: 1000px;
+
+}
+
+.ava img {
+
+}
+
+.item
+{
+    color: red;
+}
