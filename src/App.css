@@ -4,11 +4,15 @@
     display: grid;
     width: 1200px;
 
-    grid-template-areas:
-            "h h"
-            "n c";
+    grid-template-areas: "h h" "n c";
 
     grid-template-rows: 100px 1fr;
     grid-template-columns: 5fr 5fr;
     /* grid-gap: 10px;*/
+}
+
+.app-wrapper-content {
+    grid-area: c;
+    background: burlywood;
+
 }
