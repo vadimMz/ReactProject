@@ -1,6 +1,9 @@
-.MyPosts{
+.MyPosts textarea{
+    width: 95%;
+    height: 100px;
+    position: center;
 
 }
 .MyPosts button {
-
+float: right;
 }

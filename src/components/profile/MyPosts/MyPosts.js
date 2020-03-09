@@ -6,7 +6,9 @@ function MyPosts() {
     return (
         <div className={styles.MyPosts}>
             <textarea></textarea>
-            <button>Send</button>
+            <div>
+                <button>Send</button>
+            </div>
 
         </div>
     );

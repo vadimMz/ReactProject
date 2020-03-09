@@ -18,9 +18,9 @@ function Profile() {
                 description
             </div>
             <MyPosts/>
-            <Post/>
-            <Post/>
-            <Post/>
+            <Post message = "Привет!"/>
+            <Post message = "Че не отвечаешь?"/>
+            <Post message = "Купи паскод"/>
 
         </div>
     );
