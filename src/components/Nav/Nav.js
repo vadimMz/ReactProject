@@ -1,34 +1,34 @@
 import React from 'react';
 import styles from './Nav.module.css';
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 function Nav() {
     return (
         <nav className={styles.nav}>
 
 
-            <div className = {styles.item}>
-                <Link to='/Profile' path ='Profile'>Profile</Link>
+            <div className={styles.item}>
+                <NavLink to='/Profile' activeClassName={styles.active}>Profile</NavLink>
             </div>
 
-            <div className = {styles.item}>
-                <Link to='/Dialogs' path ='Dialogs'>Dialogs</Link>
+            <div className={styles.item}>
+                <NavLink to='/Dialogs' activeClassName={styles.active}>Dialogs</NavLink>
             </div>
 
-            <div className = {styles.item}>
-                <Link to='/Messages' path ='Messages'>Messages</Link>
+            <div className={styles.item}>
+                <NavLink to='/Messages' activeClassName={styles.active}>Messages</NavLink>
             </div>
 
-            <div className = {styles.item}>
-                <Link to='/News' path ='News'>News</Link>
+            <div className={styles.item}>
+                <NavLink to='/News' activeClassName={styles.active}>News</NavLink>
             </div>
 
-            <div className = {styles.item}>
-                <Link to='/Music' path ='Music'>Music</Link>
+            <div className={styles.item}>
+                <NavLink to='/Music' activeClassName={styles.active}>Music</NavLink>
             </div>
 
-            <div className = {styles.item}>
-                <Link to='/Settings' path ='Settings'>Settings</Link>
+            <div className={styles.item}>
+                <NavLink to='/Settings' activeClassName={styles.active}>Settings</NavLink>
             </div>
         </nav>
     );
