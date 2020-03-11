@@ -18,12 +18,12 @@ function App() {
                 <Header/>
                 <Nav/>
                 <div className='app-wrapper-content'>
-                    <Route path='/Profile'> <Profile/></Route>
-                    <Route path='/Dialogs'> <Dialogs/></Route>
-                    <Route path='/Messages'> <Messages/></Route>
-                    <Route path='/News'> <News/></Route>
-                    <Route path='/Music'> <Music/></Route>
-                    <Route path='/Settings'> <Settings/></Route>
+                    <Route path='/Profile'>         <Profile/>  </Route>
+                    <Route path='/Dialogs'>         <Dialogs/>  </Route>
+                    <Route path='/Messages'>        <Messages/> </Route>
+                    <Route path='/News'>            <News/>     </Route>
+                    <Route path='/Music'>           <Music/>    </Route>
+                    <Route path='/Settings'>        <Settings/> </Route>
                 </div>
             </div>
         </BrowserRouter>
