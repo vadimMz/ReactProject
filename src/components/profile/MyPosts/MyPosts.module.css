@@ -1,9 +1,14 @@
-.MyPosts textarea{
+.MyPosts {
+    padding: 10px;
+}
+
+.MyPosts textarea {
     width: 95%;
     height: 100px;
     position: center;
 
 }
+
 .MyPosts button {
-float: right;
+    float: right;
 }

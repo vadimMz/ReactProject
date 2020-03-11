@@ -1,0 +1,19 @@
+.profile {
+    grid-area: c;
+    background: burlywood;
+}
+
+.profile img {
+  width: 1000px;
+  height: 300px;
+
+}
+
+.descriptionBlock {
+    padding: 10px;
+}
+
+.descriptionBlock img {
+width: 100px;
+    height: 100px;
+}

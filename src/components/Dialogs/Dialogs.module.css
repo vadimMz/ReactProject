@@ -11,15 +11,19 @@
 .Messages {
     padding: 10px;
 
-
 }
 
 .Dialog {
-
+text-decoration: None;
+    color: black;
 
 
 }
 
 .Message {
 
+}
+
+.Active {
+    color: red;
 }
