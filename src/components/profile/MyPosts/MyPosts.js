@@ -3,6 +3,19 @@ import React from 'react';
 import styles from './MyPosts.module.css';
 import Post from "./Post/Post";
 
+let arrayOfPosts = [
+    {message: "Привет!"},
+    {message: "Че не отвечаешь?!"},
+    {message: "Купи паскод!"}
+
+];
+
+let FillPost = arrayOfPosts.map(function unction(elem) {
+    return (
+        <Post message={elem.message}/>
+    )
+});
+
 function MyPosts() {
     return (
         <div className={styles.MyPosts}>
@@ -13,11 +26,7 @@ function MyPosts() {
             <div>
                 <button>Send</button>
             </div>
-
-            <Post message="Привет!"/>
-            <Post message="Че не отвечаешь?"/>
-            <Post message="Купи паскод"/>
-
+            {FillPost}
         </div>
     );
 }
