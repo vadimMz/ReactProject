@@ -10,7 +10,7 @@ let arrayOfPosts = [
 
 ];
 
-let FillPost = arrayOfPosts.map(function (elem) {
+let FillPost = arrayOfPosts.map(function unction(elem) {
     return (
         <Post message={elem.message}/>
     )

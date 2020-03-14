@@ -1,4 +1,4 @@
-import React from "react";
+  import React from "react";
 import styles from "./Dialogs.module.css";
 import Dialog from "./Dialog/DIalog";
 import Message from "./Message/Message";

@@ -11,19 +11,19 @@ import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 
-function App() {
+function App(props) {
     return (
         <BrowserRouter>
             <div className='app-wrapper'>
                 <Header/>
                 <Nav/>
                 <div className='app-wrapper-content'>
-                    <Route path='/Profile'>         <Profile/>  </Route>
-                    <Route path='/Dialogs'>         <Dialogs/>  </Route>
-                    <Route path='/Messages'>        <Messages/> </Route>
-                    <Route path='/News'>            <News/>     </Route>
-                    <Route path='/Music'>           <Music/>    </Route>
-                    <Route path='/Settings'>        <Settings/> </Route>
+                    <Route path='/Profile' render={() => <Profile/>}/>
+                    <Route path='/Dialogs' render={() => <Dialogs/>}/>
+                    <Route path='/Messages' render={() => <Messages/>}/>
+                    <Route path='/News' render={() => <News/>}/>
+                    <Route path='/Music' render={() => <Music/>}/>
+                    <Route path='/Settings' render={() => <Settings/>}/>
                 </div>
             </div>
         </BrowserRouter>
@@ -31,3 +31,13 @@ function App() {
 }
 
 export default App;
+
+
+{/*
+<Route path='/Profile'>         <Profile/>  </Route>
+<Route path='/Dialogs'>         <Dialogs/>  </Route>
+<Route path='/Messages'>        <Messages/> </Route>
+<Route path='/News'>            <News/>     </Route>
+<Route path='/Music'>           <Music/>    </Route>
+<Route path='/Settings'>        <Settings/> </Route>*/
+}
