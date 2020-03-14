@@ -3,20 +3,14 @@ import React from 'react';
 import styles from './MyPosts.module.css';
 import Post from "./Post/Post";
 
-let arrayOfPosts = [
-    {message: "Привет!"},
-    {message: "Че не отвечаешь?!"},
-    {message: "Купи паскод!"}
 
-];
+const MyPosts = (props) => {
 
-let FillPost = arrayOfPosts.map(function unction(elem) {
-    return (
-        <Post message={elem.message}/>
-    )
-});
-
-function MyPosts() {
+    let FillPost = props.arrayOfPosts.map(elem => {
+        return (
+            <Post message={elem.message}/>
+        )
+    });
     return (
         <div className={styles.MyPosts}>
             <div>
