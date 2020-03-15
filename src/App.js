@@ -18,9 +18,9 @@ const App = (props) => {
                 <Header/>
                 <Nav/>
                 <div className='app-wrapper-content'>
-                    <Route path='/Profile' render={() => <Profile arrayOfPosts = {props.arrayOfPosts}/>}/>
-                    <Route path='/Dialogs' render={() => <Dialogs arrOfDialogs={props.arrOfDialogs}
-                                                                  arrOfMessages={props.arrOfMessages}/>}/>
+                    <Route path='/Profile' render={() => <Profile posts = {props.state.profilePage.posts}/>}/>
+                    <Route path='/Dialogs' render={() => <Dialogs dialogs = {props.state.dialogsPage.dialogs}
+                                                                  messages = {props.state.dialogsPage.messages}/>}/>
                     <Route path='/Messages' render={() => <Messages/>}/>
                     <Route path='/News' render={() => <News/>}/>
                     <Route path='/Music' render={() => <Music/>}/>
@@ -32,13 +32,3 @@ const App = (props) => {
 }
 
 export default App;
-
-
-{/*
-<Route path='/Profile'>         <Profile/>  </Route>
-<Route path='/Dialogs'>         <Dialogs/>  </Route>
-<Route path='/Messages'>        <Messages/> </Route>
-<Route path='/News'>            <News/>     </Route>
-<Route path='/Music'>           <Music/>    </Route>
-<Route path='/Settings'>        <Settings/> </Route>*/
-}

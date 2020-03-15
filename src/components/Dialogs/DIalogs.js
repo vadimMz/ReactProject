@@ -4,17 +4,16 @@ import Dialog from "./Dialog/DIalog";
 import Message from "./Message/Message";
 
 
-
 const Dialogs = (props) => {
-
-    const FillDialogs = props.arrOfDialogs.map(elem => {
+debugger;
+    const FillDialogs = props.dialogs.map(elem => {
         return (
             <Dialog id={elem.id} name={elem.name}/>
         )
 
     });
 
-    const FillMessages = props.arrOfMessages.map(elem => {
+    const FillMessages = props.messages.map(elem => {
         return (
             <Message message={elem.message}/>
         )

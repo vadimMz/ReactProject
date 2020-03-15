@@ -5,16 +5,12 @@ import Post from "./Post/Post";
 
 
 const MyPosts = (props) => {
+    let FillPost = props.posts.map(elem => <Post message={elem.message}/>);
 
-    let FillPost = props.arrayOfPosts.map(elem => {
-        return (
-            <Post message={elem.message}/>
-        )
-    });
     return (
         <div className={styles.MyPosts}>
             <div>
-                <textarea></textarea>
+                <textarea/>
             </div>
 
             <div>

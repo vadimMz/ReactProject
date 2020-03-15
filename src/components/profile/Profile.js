@@ -5,12 +5,11 @@ import MyPosts from "./MyPosts/MyPosts";
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
 const Profile = (props) => {
-
-
+    debugger;
     return (
         <div className={styles.profile}>
             <ProfileInfo/>
-            <MyPosts arrayOfPosts = {props.arrayOfPosts}/>
+            <MyPosts posts = {props.posts}/>
         </div>
     );
 }
