@@ -10,6 +10,7 @@ import Messages from "./components/Messages/Messages";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
+import Sidebar from "./components/Nav/Sidebar/Sidebar";
 
 const App = (props) => {
     return (
@@ -25,6 +26,7 @@ const App = (props) => {
                     <Route path='/News' render={() => <News/>}/>
                     <Route path='/Music' render={() => <Music/>}/>
                     <Route path='/Settings' render={() => <Settings/>}/>
+                    {/*<Route path='/Friends' render={() => <Sidebar/>}/>*/}
                 </div>
             </div>
         </BrowserRouter>

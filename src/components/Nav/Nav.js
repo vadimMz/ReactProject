@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Nav.module.css';
 import {NavLink} from "react-router-dom";
+import Sidebar from "./Sidebar/Sidebar";
 
 function Nav() {
     return (
@@ -30,6 +31,13 @@ function Nav() {
             <div className={styles.item}>
                 <NavLink to='/Settings' activeClassName={styles.active}>Settings</NavLink>
             </div>
+
+            <div className={styles.item}>
+                <NavLink to='/Friends' activeClassName={styles.active}>Friends</NavLink>
+            </div>
+
+
+            <Sidebar/>
         </nav>
     );
 }
