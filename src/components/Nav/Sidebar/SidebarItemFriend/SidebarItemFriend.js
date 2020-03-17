@@ -6,7 +6,7 @@ function SidebarItemFriend(props) {
     return (
             <div className={styles.item}>
                 <div className={styles.friendAva}></div>
-                <div className={styles.friendName}>{props.Name}</div>
+                <div className={styles.friendName}>{props.name}</div>
             </div>
     );
 }

@@ -1,6 +1,6 @@
 
 .sidebar {
-    grid-area: n;
+    width: 100%;
     background: bisque;
 }
 .sidebarName{
@@ -27,11 +27,3 @@
 
 }
 
-.item a {
-     color: Black;
-     text-decoration: none;
- }
-
-.item .active {
-    color: Red;
-}

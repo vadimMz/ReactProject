@@ -19,3 +19,7 @@
 .item .active {
     color: Red;
 }
+
+.sidebar {
+    margin-top: 50px;
+}
