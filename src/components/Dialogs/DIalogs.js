@@ -6,7 +6,8 @@ import Message from "./Message/Message";
 
 const Dialogs = (props) => {
     let textAreaElement = React.createRef();
-
+    let anus = [];
+    const pushAnus = () => anus.push(textAreaElement.current.value);
 
 
 
@@ -37,7 +38,9 @@ const Dialogs = (props) => {
                     <textarea ref={textAreaElement}></textarea>
 
                     <div className={styles.NewMessageInput}>
-                        <button className= {styles.addNewMessageButton}> Add message</button>
+                        <button className= {styles.addNewMessageButton} onClick={pushAnus}> Add message</button>
+                        <button className= {styles.addNewMessageButton} onClick={ () => alert(anus) }> Alert</button>
+
                     </div>
                 </div>
             </div>

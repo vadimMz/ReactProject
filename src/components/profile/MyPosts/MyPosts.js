@@ -6,15 +6,21 @@ import Post from "./Post/Post";
 
 const MyPosts = (props) => {
     let FillPost = props.posts.map(elem => <Post message={elem.message}/>);
+    let newPostElement = React.createRef();
+
+    let AddPost = () => {
+        let text = newPostElement.current.value;
+        props.addPost(text);
+    }
 
     return (
         <div className={styles.MyPosts}>
             <div>
-                <textarea/>
+                <textarea ref = {newPostElement}></textarea>
             </div>
 
             <div>
-                <button>Send</button>
+                <button onClick={AddPost}>Send</button>
             </div>
             {FillPost}
         </div>
