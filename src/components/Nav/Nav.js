@@ -4,7 +4,6 @@ import {NavLink} from "react-router-dom";
 import Sidebar from "./Sidebar/Sidebar";
 
 function Nav(props) {
-
     return (
         <nav className={styles.nav}>
 
