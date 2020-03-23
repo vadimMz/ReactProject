@@ -1,4 +1,38 @@
-import {rerenderEntireTree} from "../render";
+let  rerenderEntireTree = () => {
+    console.log('state changed');
+}
+
+export const AddPost = (postMessage) => {
+    let newPost = {
+        id: 4,
+        message: postMessage
+    };
+    state.profilePage.posts.push(newPost);
+    state.profilePage.newPostText = '';
+    rerenderEntireTree(state);
+};
+export const UpdatePost = (NewText) => {
+    state.profilePage.newPostText = NewText;
+    rerenderEntireTree(state);
+};
+export const AddMessage = (messageText) => {
+    let newMessage = {
+        id: 5,
+        message: messageText
+    };
+    state.dialogsPage.messages.push(newMessage);
+    state.dialogsPage.newMessageText = '';
+    rerenderEntireTree(state);
+};
+export const UpdateMessage = (text) => {
+    state.dialogsPage.newMessageText = text;
+    rerenderEntireTree(state);
+};
+
+export let subscribe  = (observer) => {
+    rerenderEntireTree = observer;
+}
+
 
 let state = {
     profilePage: {
@@ -23,7 +57,7 @@ let state = {
             {id: 3, message: 'OK'},
             {id: 4, message: 'Go'},
         ],
-        newMessageText: ""
+        newMessageText: ""  //Text from textarea in Dialogs/message.
     },
     sidebar: {
         friends: [
@@ -33,37 +67,4 @@ let state = {
         ]
     }
 };
-
-export let AddPost = (postMessage) => {
-    let newPost = {
-        id: 4,
-        message: postMessage
-    };
-    state.profilePage.posts.push(newPost);
-    state.profilePage.newPostText = '';
-    rerenderEntireTree(state);
-};
-
-
-export let UpdatePost = (NewText) => {
-    state.profilePage.newPostText = NewText;
-    rerenderEntireTree(state);
-};
-
-export let AddMessage = (messageText) => {
-    let newMessage = {
-        id: 5,
-        message: messageText
-    };
-    state.dialogsPage.messages.push(newMessage);
-    state.dialogsPage.newMessageText = '';
-    rerenderEntireTree(state);
-};
-
-export let UpdateMessage = (text) => {
-    state.dialogsPage.newMessageText = text;
-    rerenderEntireTree(state);
-};
-
-
 export default state;

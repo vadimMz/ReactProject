@@ -1,5 +1,4 @@
 import React from 'react';
-//import logo from './logo.svg';
 import './App.css';
 import Header from "./components/Header/Header";
 import Nav from "./components/Nav/Nav";
@@ -10,7 +9,6 @@ import Messages from "./components/Messages/Messages";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
-//import Sidebar from "./components/Nav/Sidebar/Sidebar";
 
 
 const App = (props) => {
