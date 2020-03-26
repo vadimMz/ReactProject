@@ -19,13 +19,22 @@ const Dialogs = (props) => {
 
     let AddMessage = () => {
         let text = textAreaElement.current.value;
-        props.addMessage(text);
+        let action = {
+            type: 'ADD-MESSAGE',
+            messageText: text
+        }
+
+        props.dispatch(action);
     }
 
 
     let UpdateMessageText = () => {
         let text = textAreaElement.current.value;
-        props.updateMessage(text);
+        let action = {
+            type: 'UPDATE-MESSAGE',
+            messageText: text
+        }
+        props.dispatch(action);
     }
 
     return (
@@ -42,7 +51,8 @@ const Dialogs = (props) => {
                         <button className={styles.addNewMessageButton}
                                 onClick={AddMessage}
                                 onChange={UpdateMessageText}
-                        > Add message</button>
+                        > Add message
+                        </button>
                     </div>
                 </div>
             </div>

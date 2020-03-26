@@ -12,19 +12,34 @@ const MyPosts = (props) => {
 
     let AddPost = () => {
         let text = newPostElement.current.value;
-        props.addPost(text);
+        let action = {
+            type: 'ADD-POST',
+            postMessage: text
+        }
+        props.dispatch(action)
+
+        /*        let text = newPostElement.current.value;
+                props.addPost(text);*/
 
     }
 
     let UpdatePostText = () => {
         let text = newPostElement.current.value;
-        props.updatePost(text);
+        let action = {
+            type: 'UPDATE-POST',
+            NewText: text
+        }
+        props.dispatch(action)
+        //updatePost(text)
+
+        /*        let text = newPostElement.current.value;
+                props.updatePost(text);*/
     }
 
     return (
         <div className={styles.MyPosts}>
             <div>
-                <textarea ref={newPostElement} value={props.newPostText} onChange={UpdatePostText}  />
+                <textarea ref={newPostElement} value={props.newPostText} onChange={UpdatePostText}/>
             </div>
 
             <div>
