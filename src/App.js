@@ -38,7 +38,7 @@ const App = (props) => {
                                updateMessage = {props.updateMessage}*/
                            />}/>
 
-                    <Route path='/Messages' render={() => <Messages/>}/>
+                    {/*<Route path='/Messages' render={() => <Messages/>}/>*/}
                     <Route path='/News' render={() => <News/>}/>
                     <Route path='/Music' render={() => <Music/>}/>
                     <Route path='/Settings' render={() => <Settings/>}/>

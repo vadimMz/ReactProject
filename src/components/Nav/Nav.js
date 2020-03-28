@@ -16,9 +16,9 @@ function Nav(props) {
                 <NavLink to='/Dialogs' activeClassName={styles.active}>Dialogs</NavLink>
             </div>
 
-            <div className={styles.item}>
-                <NavLink to='/Messages' activeClassName={styles.active}>Messages</NavLink>
-            </div>
+            {/*<div className={styles.item}>*/}
+            {/*    <NavLink to='/Messages' activeClassName={styles.active}>Messages</NavLink>*/}
+            {/*</div>*/}
 
             <div className={styles.item}>
                 <NavLink to='/News' activeClassName={styles.active}>News</NavLink>

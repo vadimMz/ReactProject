@@ -3,37 +3,22 @@ import React from 'react';
 import styles from './MyPosts.module.css';
 import Post from "./Post/Post";
 import Profile from "../Profile";
+import {AddPostActionCreator, UpdatePostTextActionCreator} from "../../../redux/state";
 
-//newPostText = {props.newPostText}
-// updatePost = {props.updatePost}
 const MyPosts = (props) => {
     let FillPost = props.posts.map(elem => <Post message={elem.message}/>);
     let newPostElement = React.createRef();
 
     let AddPost = () => {
         let text = newPostElement.current.value;
-        let action = {
-            type: 'ADD-POST',
-            postMessage: text
-        }
+        let action = AddPostActionCreator(text);
         props.dispatch(action)
-
-        /*        let text = newPostElement.current.value;
-                props.addPost(text);*/
-
     }
 
     let UpdatePostText = () => {
         let text = newPostElement.current.value;
-        let action = {
-            type: 'UPDATE-POST',
-            NewText: text
-        }
+        let action = UpdatePostTextActionCreator(text);
         props.dispatch(action)
-        //updatePost(text)
-
-        /*        let text = newPostElement.current.value;
-                props.updatePost(text);*/
     }
 
     return (

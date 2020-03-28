@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Dialogs.module.css";
 import Dialog from "./Dialog/DIalog";
 import Message from "./Message/Message";
-import {UpdateMessage} from "../../redux/state";
+import {AddMessageActionCreator, AddUpdateMessageTextActionCreator, UpdateMessage} from "../../redux/state";
 
 const Dialogs = (props) => {
     let textAreaElement = React.createRef();
@@ -17,12 +17,10 @@ const Dialogs = (props) => {
         )
     });
 
+
     let AddMessage = () => {
         let text = textAreaElement.current.value;
-        let action = {
-            type: 'ADD-MESSAGE',
-            messageText: text
-        }
+        let action = AddMessageActionCreator(text);
 
         props.dispatch(action);
     }
@@ -30,10 +28,7 @@ const Dialogs = (props) => {
 
     let UpdateMessageText = () => {
         let text = textAreaElement.current.value;
-        let action = {
-            type: 'UPDATE-MESSAGE',
-            messageText: text
-        }
+        let action = AddUpdateMessageTextActionCreator(text);
         props.dispatch(action);
     }
 
