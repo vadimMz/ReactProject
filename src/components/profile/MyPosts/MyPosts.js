@@ -3,7 +3,8 @@ import React from 'react';
 import styles from './MyPosts.module.css';
 import Post from "./Post/Post";
 import Profile from "../Profile";
-import {AddPostActionCreator, UpdatePostTextActionCreator} from "../../../redux/state";
+import {AddPostActionCreator, UpdatePostTextActionCreator} from "../../../redux/profile-reducer";
+
 
 const MyPosts = (props) => {
     let FillPost = props.posts.map(elem => <Post message={elem.message}/>);
