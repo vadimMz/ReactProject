@@ -1,3 +1,6 @@
+import profileReducer from "./profile-reducer";
+import dialogsReducer from "./dialogs-reducer";
+
 const ADD_POST = 'ADD-POST';
 const UPDATE_POST = 'UPDATE-POST';
 const ADD_MESSAGE = 'ADD-MESSAGE';
@@ -52,34 +55,12 @@ let store = {
     },
 
     dispatch(action) {
-        if (action.type === 'ADD-POST') {
-            let newPost = {
-                id: 4,
-                message: action.postMessage //
-            };
-            this._state.profilePage.posts.push(newPost);
-            this._state.profilePage.newPostText = '';
-            this._callSubscriber(this._state);
-
-        } else if (action.type === 'UPDATE-POST') {
-            this._state.profilePage.newPostText = action.NewText;
-            this._callSubscriber(this._state);
-
-        } else if (action.type === 'ADD-MESSAGE') {
-            let newMessage = {
-                id: 5,
-                message: action.messageText //
-            };
-            this._state.dialogsPage.messages.push(newMessage);
-            this._state.dialogsPage.newMessageText = '';
-            this._callSubscriber(this._state);
-
-        } else if (action.type === 'UPDATE-MESSAGE') {
-            this._state.dialogsPage.newMessageText = action.messageText;
-            this._callSubscriber(this._state);
-        }
+        this._state.profilePage = profileReducer(this._state.profilePage, action);
+        this._state.dialogsPage = dialogsReducer(this._state.dialogsPage, action);
+        this._callSubscriber(this._state);
     },
 };
+
 
 export const AddPostActionCreator = (text) => {
     return {
