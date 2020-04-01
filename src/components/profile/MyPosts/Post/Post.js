@@ -4,6 +4,7 @@ import styles from './Post.module.css';
 
 
 function Post(props) {
+
     return (
         <div className={styles.post}>
             <img alt = 'ava'

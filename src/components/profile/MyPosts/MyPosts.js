@@ -7,6 +7,7 @@ import {AddPostActionCreator, UpdatePostTextActionCreator} from "../../../redux/
 
 
 const MyPosts = (props) => {
+    debugger
     let FillPost = props.posts.map(elem => <Post message={elem.message}/>);
     let newPostElement = React.createRef();
 

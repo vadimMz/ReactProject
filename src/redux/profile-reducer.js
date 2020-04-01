@@ -1,7 +1,16 @@
 const ADD_POST = 'ADD-POST';
 const UPDATE_POST = 'UPDATE-POST';
 
-const profileReducer = (state, action) => {
+let INITIAL_PARAM = {
+        posts: [
+            {id: 1, message: "Привет!"},
+            {id: 2, message: "Че не отвечаешь?!"},
+            {id: 3, message: "Купи паскод!"}
+        ],
+        newPostText: "" //Text from textarea in profile.
+}
+
+const profileReducer = (state = INITIAL_PARAM, action) => {
     switch (action.type) {
         case ADD_POST:
             let newPost = {
@@ -10,6 +19,7 @@ const profileReducer = (state, action) => {
             };
             state.posts.push(newPost);
             state.newPostText = '';
+            return state;
         case UPDATE_POST:
             state.newPostText = action.NewText;
         default:

@@ -12,11 +12,13 @@ import Settings from "./components/Settings/Settings";
 
 
 const App = (props) => {
+
     return (
 
             <div className='app-wrapper'>
                 <Header/>
-                <Nav name = {props.state.sidebar.friends}/>
+                <Nav name = {props.state.sidebar.friends}
+                />
                 <div className='app-wrapper-content'>
 
                     <Route path='/Profile'
