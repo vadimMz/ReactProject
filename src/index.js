@@ -11,7 +11,8 @@ export let rerenderEntireTree = (state) => {
 
     ReactDOM.render(
         <BrowserRouter>
-            <App state={state}
+            <App store={store}
+                 state={state}
                  dispatch={store.dispatch.bind(store)}
             />
         </BrowserRouter>, document.getElementById('root'));
@@ -19,11 +20,11 @@ export let rerenderEntireTree = (state) => {
 
 rerenderEntireTree(store.getState());
 
-store.subscribe( () => {
-    let state = store.getState();
-        rerenderEntireTree (state);
-}
-    );
+store.subscribe(() => {
+        let state = store.getState();
+        rerenderEntireTree(state);
+    }
+);
 
 
 /*

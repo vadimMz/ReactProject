@@ -15,38 +15,39 @@ const App = (props) => {
 
     return (
 
-            <div className='app-wrapper'>
-                <Header/>
-                <Nav name = {props.state.sidebar.friends}
-                />
-                <div className='app-wrapper-content'>
+        <div className='app-wrapper'>
+            <Header/>
+            <Nav name={props.state.sidebar.friends}
+            />
+            <div className='app-wrapper-content'>
 
-                    <Route path='/Profile'
-                           render={() => <Profile
-                               posts = {props.state.profilePage.posts}
-                               newPostText = {props.state.profilePage.newPostText}
-                               dispatch = {props.dispatch}
-/*                               addPost = {props.addPost}
-                               updatePost = {props.updatePost}*/
-                           />}/>
+                <Route path='/Profile'
+                       render={() => <Profile
+                           store={props.store}
+                           /*posts={props.state.profilePage.posts}
+                           newPostText={props.state.profilePage.newPostText}
+                           dispatch={props.dispatch}*/
+                           /*                               addPost = {props.addPost}
+                                                          updatePost = {props.updatePost}*/
+                       />}/>
 
-                    <Route path='/Dialogs'
-                           render={() => <Dialogs
-                               dialogs = {props.state.dialogsPage.dialogs}
-                               messages = {props.state.dialogsPage.messages}
-                               newMessageText = {props.state.dialogsPage.newMessageText}
-                               dispatch = {props.dispatch}
-/*                               addMessage = {props.addMessage}
-                               updateMessage = {props.updateMessage}*/
-                           />}/>
+                <Route path='/Dialogs'
+                       render={() => <Dialogs
+                           dialogs={props.state.dialogsPage.dialogs}
+                           messages={props.state.dialogsPage.messages}
+                           newMessageText={props.state.dialogsPage.newMessageText}
+                           dispatch={props.dispatch}
+                           /*                               addMessage = {props.addMessage}
+                                                          updateMessage = {props.updateMessage}*/
+                       />}/>
 
-                    {/*<Route path='/Messages' render={() => <Messages/>}/>*/}
-                    <Route path='/News' render={() => <News/>}/>
-                    <Route path='/Music' render={() => <Music/>}/>
-                    <Route path='/Settings' render={() => <Settings/>}/>
-                    {/*<Route path='/Friends' render={() => <Sidebar/>}/>*/}
-                </div>
+                {/*<Route path='/Messages' render={() => <Messages/>}/>*/}
+                <Route path='/News' render={() => <News/>}/>
+                <Route path='/Music' render={() => <Music/>}/>
+                <Route path='/Settings' render={() => <Settings/>}/>
+                {/*<Route path='/Friends' render={() => <Sidebar/>}/>*/}
             </div>
+        </div>
     );
 }
 

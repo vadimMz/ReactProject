@@ -20,6 +20,7 @@ const profileReducer = (state = INITIAL_PARAM, action) => {
             state.posts.push(newPost);
             state.newPostText = '';
             return state;
+
         case UPDATE_POST:
             state.newPostText = action.NewText;
         default:
