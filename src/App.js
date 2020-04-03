@@ -9,6 +9,7 @@ import Messages from "./components/Messages/Messages";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
+import DialogsContainer from "./components/Dialogs/DIalogsContainer";
 
 
 const App = (props) => {
@@ -24,21 +25,16 @@ const App = (props) => {
                 <Route path='/Profile'
                        render={() => <Profile
                            store={props.store}
-                           /*posts={props.state.profilePage.posts}
-                           newPostText={props.state.profilePage.newPostText}
-                           dispatch={props.dispatch}*/
-                           /*                               addPost = {props.addPost}
-                                                          updatePost = {props.updatePost}*/
+
                        />}/>
 
                 <Route path='/Dialogs'
-                       render={() => <Dialogs
-                           dialogs={props.state.dialogsPage.dialogs}
+                       render={() => <DialogsContainer store = {props.store}
+                           /*dialogs={props.state.dialogsPage.dialogs}
                            messages={props.state.dialogsPage.messages}
                            newMessageText={props.state.dialogsPage.newMessageText}
-                           dispatch={props.dispatch}
-                           /*                               addMessage = {props.addMessage}
-                                                          updateMessage = {props.updateMessage}*/
+                           dispatch={props.dispatch}*/
+
                        />}/>
 
                 {/*<Route path='/Messages' render={() => <Messages/>}/>*/}

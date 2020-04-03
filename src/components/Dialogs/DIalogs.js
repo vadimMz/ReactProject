@@ -2,10 +2,10 @@ import React from "react";
 import styles from "./Dialogs.module.css";
 import Dialog from "./Dialog/DIalog";
 import Message from "./Message/Message";
-import {AddMessageActionCreator, AddUpdateMessageTextActionCreator} from "../../redux/dialogs-reducer";
 
 
 const Dialogs = (props) => {
+
     let textAreaElement = React.createRef();
     const FillDialogs = props.dialogs.map(elem => {
         return (
@@ -18,19 +18,13 @@ const Dialogs = (props) => {
         )
     });
 
-
     let AddMessage = () => {
         let text = textAreaElement.current.value;
-        let action = AddMessageActionCreator(text);
-
-        props.dispatch(action);
+        props.AddMessage(text);
     }
-
-
     let UpdateMessageText = () => {
         let text = textAreaElement.current.value;
-        let action = AddUpdateMessageTextActionCreator(text);
-        props.dispatch(action);
+        props.UpdateMessageText(text);
     }
 
     return (
