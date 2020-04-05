@@ -15,10 +15,11 @@ import DialogsContainer from "./components/Dialogs/DIalogsContainer";
 const App = (props) => {
 
     return (
-
         <div className='app-wrapper'>
             <Header/>
-            <Nav name={props.state.sidebar.friends}
+            <Nav store = {props.store}
+                /*name={props.state.sidebar.friends}*/
+
             />
             <div className='app-wrapper-content'>
 

@@ -37,7 +37,7 @@ function Nav(props) {
             </div>
 
 
-            <Sidebar name={props.name}/>
+            <Sidebar store={props.store}/>
         </nav>
     );
 }

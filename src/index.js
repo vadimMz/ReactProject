@@ -5,16 +5,16 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter} from "react-router-dom";
 import store from './redux/redux-store'
+import StoreContext from "./redux/store-context";
 
 
 export let rerenderEntireTree = (state) => {
 
     ReactDOM.render(
         <BrowserRouter>
-            <App store={store}
-                 state={state}
-                 dispatch={store.dispatch.bind(store)}
-            />
+            <StoreContext.Provider value={store}>
+                <App store={store}/>
+            </StoreContext.Provider>
         </BrowserRouter>, document.getElementById('root'));
 }
 

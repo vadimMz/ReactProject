@@ -5,7 +5,8 @@ import SidebarItemFriend from "./SidebarItemFriend/SidebarItemFriend";
 import Post from "../../profile/MyPosts/Post/Post";
 
 function Sidebar(props) {
-    let FillSidebarFriends =  props.name.map(elem => <SidebarItemFriend name={elem.name}/>);
+    debugger
+    let FillSidebarFriends = props.store.getState().sidebar.friends.map(elem => <SidebarItemFriend name={elem.name}/>);
     return (
         <div className={styles.sidebar}>
             {FillSidebarFriends}
