@@ -17,17 +17,12 @@ const App = (props) => {
     return (
         <div className='app-wrapper'>
             <Header/>
-            <Nav store = {props.store}
-                /*name={props.state.sidebar.friends}*/
-
-            />
+            <Nav store = {props.store}/>
             <div className='app-wrapper-content'>
-
                 <Route path='/Profile'
                        render={() => <Profile
-                           store={props.store}
-
-                       />}/>
+                           store={props.store}/>}
+                />
 
                 <Route path='/Dialogs'
                        render={() => <DialogsContainer store = {props.store}

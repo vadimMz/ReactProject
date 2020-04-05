@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from './Nav.module.css';
 import {NavLink} from "react-router-dom";
-import Sidebar from "./Sidebar/Sidebar";
+import SidebarFriends from "./Sidebar/SidebarFriends";
+import SidebarFriendsContainer from "./Sidebar/SidebarFriendsContainer";
 
 function Nav(props) {
     return (
@@ -36,8 +37,7 @@ function Nav(props) {
                 <NavLink to='/Friends' activeClassName={styles.active}>Friends </NavLink>
             </div>
 
-
-            <Sidebar store={props.store}/>
+            <SidebarFriendsContainer/>
         </nav>
     );
 }
