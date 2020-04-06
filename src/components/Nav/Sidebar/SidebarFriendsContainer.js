@@ -1,9 +1,11 @@
 import React from 'react';
 
 import SidebarFriends from "./SidebarFriends";
-import StoreContext from "../../../redux/store-context";
+import {connect} from "react-redux";
+import mapStateToProps from "react-redux/es/connect/mapStateToProps";
+//import StoreContext from "../../../redux/store-context";
 
-function SidebarFriendsContainer(props) {
+/*function SidebarFriendsContainer(props) {
 
 
     return (
@@ -16,10 +18,15 @@ function SidebarFriendsContainer(props) {
                     )
                 }
             }
-
         </StoreContext.Consumer>
 
     );
+}*/
+let mapStateToPropsSidebarFriends = (state) => {
+    return {
+        state : state
+    }
 }
+const SidebarFriendsContainer = connect(mapStateToPropsSidebarFriends,null)(SidebarFriends);
 
 export default SidebarFriendsContainer;

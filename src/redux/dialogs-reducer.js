@@ -35,6 +35,7 @@ const dialogsReducer = (state = INITIAL_PARAM, action) => {
             return state;
         case UPDATE_MESSAGE:
             state.newMessageText = action.messageText;
+            return state;
         default:
             return state;
     }

@@ -2,9 +2,83 @@ import React from "react";
 import {AddMessageActionCreator, AddUpdateMessageTextActionCreator} from "../../redux/dialogs-reducer";
 import Dialogs from "./DIalogs";
 import StoreContext from "../../redux/store-context";
+import {connect} from "react-redux";
 
 
-const DialogsContainer = (props) => {
+
+const mapDispatchToProps = (dispatch) => {
+    let AddMessage = (text) => {
+        let action = AddMessageActionCreator(text);
+        dispatch(action);
+    }
+    let UpdateMessageText = (text) => {
+        let action = AddUpdateMessageTextActionCreator(text);
+        dispatch(action);
+    }
+    return {
+        AddMessage: () => AddMessage, //добавил обертку чтобы не терялся контект
+        UpdateMessageText:  () => UpdateMessageText //добавил обертку чтобы не терялся контект
+    }
+
+}
+
+const mapStateToProps = (state) => {
+    return {
+        dialogs : state.dialogsPage.dialogs,
+        messages : state.dialogsPage.messages,
+        newMessageText : state.dialogsPage.newMessageText
+    }
+
+}
+let DialogsContainer = connect(mapStateToProps, mapDispatchToProps)(Dialogs);
+
+export default DialogsContainer;
+
+
+
+
+
+
+/*
+const mapDispatchToProps = (dispatch) => {
+    let AddMessage = (text) => {
+        let action = AddMessageActionCreator(text);
+        dispatch(action);
+    }
+    let UpdateMessageText = (text) => {
+        let action = AddUpdateMessageTextActionCreator(text);
+        dispatch(action);
+    }
+    return {
+        AddMessage: {AddMessage},
+        UpdateMessageText: {UpdateMessageText}
+    }
+}
+
+const mapStateToProps = (state) => {
+    return {
+        dialogs : state.dialogsPage.dialogs,
+        messages : state.dialogsPage.messages,
+        newMessageText : state.dialogsPage.newMessageText
+    }
+
+}
+let DialogsContainer = connect(mapStateToProps, mapDispatchToProps)(Dialogs);
+
+export default DialogsContainer;
+
+
+*
+*
+* */
+
+
+
+
+
+
+
+/*const DialogsContainer = (props) => {
 
     return (<StoreContext.Consumer>
             {
@@ -30,8 +104,16 @@ const DialogsContainer = (props) => {
             }
         </StoreContext.Consumer>
     )
-};
-export default DialogsContainer;
+};*/
+
+
+
+
+
+
+
+
+
 
 
 /*import React from "react";

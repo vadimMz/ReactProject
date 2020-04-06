@@ -5,7 +5,7 @@ import Message from "./Message/Message";
 
 
 const Dialogs = (props) => {
-
+debugger
     let textAreaElement = React.createRef();
     const FillDialogs = props.dialogs.map(elem => {
         return (
@@ -23,6 +23,7 @@ const Dialogs = (props) => {
         props.AddMessage(text);
     }
     let UpdateMessageText = () => {
+
         let text = textAreaElement.current.value;
         props.UpdateMessageText(text);
     }

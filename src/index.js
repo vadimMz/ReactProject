@@ -4,9 +4,11 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter} from "react-router-dom";
-import store from './redux/redux-store'
+//import store from './redux/redux-store'
 import StoreContext from "./redux/store-context";
-import {Provider} from "./redux/Provider";
+import {Provider} from "react-redux";
+import store from "./redux/redux-store";
+
 
 
 export let rerenderEntireTree = (state) => {
@@ -14,7 +16,7 @@ export let rerenderEntireTree = (state) => {
     ReactDOM.render(
         <BrowserRouter>
             <Provider store={store}>
-                <App store={store}/>
+                <App />
             </Provider>
         </BrowserRouter>, document.getElementById('root'));
 }
