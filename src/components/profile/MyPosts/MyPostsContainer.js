@@ -48,17 +48,15 @@ let mapStateToProps = (state) => {
 
 }
 let mapDispatchToProps = (dispatch) => {
-    let AddPost = (text) => {
-        let action = AddPostActionCreator(text);
-        dispatch(action);
-    }
-    let UpdatePostText = (text) => {
-        let action = UpdatePostTextActionCreator(text);
-        dispatch(action);
-    }
     return {
-        UpdatePostText: () => UpdatePostText, //добавил обертку чтобы не терялся контект
-        AddPost: () => AddPost //добавил обертку чтобы не терялся контект
+        UpdatePostText: (text) => {
+            let action = UpdatePostTextActionCreator(text);
+            dispatch(action);
+        }, //
+        AddPost: (text) => {
+            let action = AddPostActionCreator(text);
+            dispatch(action)
+        } //
     }
 }
 

@@ -3,7 +3,7 @@ import './App.css';
 import Header from "./components/Header/Header";
 import Nav from "./components/Nav/Nav";
 import Profile from "./components/profile/Profile";
-import Dialogs from "./components/Dialogs/DIalogs";
+import Dialogs from "./components/Dialogs/Dialogs";
 import {Route} from "react-router-dom";
 import Messages from "./components/Messages/Messages";
 import News from "./components/News/News";
@@ -13,7 +13,6 @@ import DialogsContainer from "./components/Dialogs/DialogsContainer";
 
 
 const App = (props) => {
-
     return (
         <div className='app-wrapper'>
             <Header/>
@@ -26,18 +25,11 @@ const App = (props) => {
 
                 <Route path='/Dialogs'
                        render={() => <DialogsContainer store = {props.store}
-                           /*dialogs={props.state.dialogsPage.dialogs}
-                           messages={props.state.dialogsPage.messages}
-                           newMessageText={props.state.dialogsPage.newMessageText}
-                           dispatch={props.dispatch}*/
-
                        />}/>
-
-                {/*<Route path='/Messages' render={() => <Messages/>}/>*/}
                 <Route path='/News' render={() => <News/>}/>
                 <Route path='/Music' render={() => <Music/>}/>
                 <Route path='/Settings' render={() => <Settings/>}/>
-                {/*<Route path='/Friends' render={() => <Sidebar/>}/>*/}
+
             </div>
         </div>
     );

@@ -22,20 +22,22 @@ let INITIAL_PARAM = {
 
 const dialogsReducer = (state = INITIAL_PARAM, action) => {
 
+    let stateCopy = {...state};
 
     switch (action.type) {
         case ADD_MESSAGE:
+
             let newMessage = {
                 id: 5,
-                message: action.messageText //
+                message: action.messageText
             };
 
-            state.messages.push(newMessage);
-            state.newMessageText = '';
-            return state;
+            stateCopy.messages.push(newMessage);
+            stateCopy.newMessageText = '';
+            return stateCopy;
         case UPDATE_MESSAGE:
-            state.newMessageText = action.messageText;
-            return state;
+            stateCopy.newMessageText = action.messageText;
+            return stateCopy;
         default:
             return state;
     }

@@ -1,11 +1,10 @@
 import React from "react";
 import styles from "./Dialogs.module.css";
-import Dialog from "./Dialog/DIalog";
+import Dialog from "./Dialog/Dialog";
 import Message from "./Message/Message";
 
 
 const Dialogs = (props) => {
-debugger
     let textAreaElement = React.createRef();
     const FillDialogs = props.dialogs.map(elem => {
         return (
