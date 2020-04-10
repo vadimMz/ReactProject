@@ -31,7 +31,7 @@ const dialogsReducer = (state = INITIAL_PARAM, action) => {
                 id: 5,
                 message: action.messageText
             };
-
+            stateCopy.messages = {...state.messages}
             stateCopy.messages.push(newMessage);
             stateCopy.newMessageText = '';
             return stateCopy;
