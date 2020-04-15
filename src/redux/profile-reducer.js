@@ -11,25 +11,35 @@ let INITIAL_PARAM = {
 }
 
 const profileReducer = (state = INITIAL_PARAM, action) => {
-    let stateCopy = {...state};
+
     switch (action.type) {
 
-        case ADD_POST:
-            let newPost = {
-                id: 4,
-                message: action.postMessage //
+        case ADD_POST: {
+            /* let stateCopy = {...state};
+             let newPost = {
+                 id: 4,
+                 message: action.postMessage //
+             };
+
+             stateCopy.posts = {...state.posts};
+             stateCopy.posts.push(newPost);
+             stateCopy.newPostText = '';*/
+            return {
+                ...state,
+                posts: [...state.posts, {id: 4, message: action.postMessage}],
+                newPostText: ''
             };
-
-            stateCopy.posts = {...state.posts};
-            stateCopy.posts.push(newPost);
-            stateCopy.newPostText = '';
-            return stateCopy;
-
-        case UPDATE_POST:
-            stateCopy.newPostText = action.NewText;
-            return stateCopy;
+        }
+        case UPDATE_POST: {
+            //let stateCopy = {...state};
+            //stateCopy.newPostText = action.NewText;
+            return {
+                ...state,
+                newPostText: action.NewText
+            };
+        }
         default:
-            return stateCopy;
+            return state;
     }
 };
 
