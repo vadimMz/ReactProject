@@ -6,7 +6,7 @@ import {connect} from "react-redux";
 
 
 /*
-const MyPostsContainer = (props) => {
+const UsersContainer = (props) => {
 
     return (
         <StoreContext.Consumer>
@@ -23,7 +23,7 @@ const MyPostsContainer = (props) => {
                     }
 
                     return (
-                        <MyPosts
+                        <Users
                             UpdatePostText={UpdatePostText}
                             AddPost={AddPost}
                             posts={state.profilePage.posts}
@@ -69,10 +69,10 @@ export default MyPostsContainer;
 /*
 import React from 'react';
 import {AddPostActionCreator, UpdatePostTextActionCreator} from "../../../redux/profile-reducer";
-import MyPosts from "./MyPosts";
+import Users from "./Users";
 
 
-const MyPostsContainer = (props) => {
+const UsersContainer = (props) => {
     let state = props.store.getState();
     let AddPost = (text) => {
         let action = AddPostActionCreator(text);
@@ -84,7 +84,7 @@ const MyPostsContainer = (props) => {
     }
 
     return (
-        <MyPosts
+        <Users
             UpdatePostText={UpdatePostText}
             AddPost={AddPost}
             posts={state.profilePage.posts}
@@ -93,5 +93,5 @@ const MyPostsContainer = (props) => {
     );
 }
 
-export default MyPostsContainer;
+export default UsersContainer;
 */

@@ -5,7 +5,7 @@ import Post from "./Post/Post";
 
 
 const MyPosts = (props) => {
-    let FillPost = props.posts.map(elem => <Post message={elem.message}/>);
+    let FillPost = props.posts.map(elem => <Post message={elem.message} key={elem.id}/>);
     let newPostElement = React.createRef();
 
     let AddPost = () => {
@@ -46,13 +46,13 @@ export default MyPosts;
 /*
 import React from 'react';
 //import '../../../App.css';
-import styles from './MyPosts.module.css';
+import styles from './Users.module.css';
 import Post from "./Post/Post";
 import Profile from "../Profile";
 import {AddPostActionCreator, UpdatePostTextActionCreator} from "../../../redux/profile-reducer";
 
 
-const MyPosts = (props) => {
+const Users = (props) => {
     let FillPost = props.posts.map(elem => <Post message={elem.message}/>);
     let newPostElement = React.createRef();
 
@@ -69,7 +69,7 @@ const MyPosts = (props) => {
     }
 
     return (
-        <div className={styles.MyPosts}>
+        <div className={styles.Users}>
             <div>
                 <textarea ref={newPostElement} value={props.newPostText} onChange={UpdatePostText}/>
             </div>
@@ -82,5 +82,5 @@ const MyPosts = (props) => {
     );
 }
 
-export default MyPosts;
+export default Users;
 * */

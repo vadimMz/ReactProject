@@ -26,14 +26,7 @@ const dialogsReducer = (state = INITIAL_PARAM, action) => {
 
     switch (action.type) {
         case ADD_MESSAGE: {
-            /*let stateCopy = {...state};
-            let newMessage = {
-                id: 5,
-                message: action.messageText
-            };
-            stateCopy.messages = {...state.messages}
-            stateCopy.messages.push(newMessage);
-            stateCopy.newMessageText = '';*/
+
             return {
                 ...state,
                 messages: [...state.messages,{id:5, message: action.messageText}],

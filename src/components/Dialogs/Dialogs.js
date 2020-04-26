@@ -8,12 +8,12 @@ const Dialogs = (props) => {
     let textAreaElement = React.createRef();
     const FillDialogs = props.dialogs.map(elem => {
         return (
-            <Dialog id={elem.id} name={elem.name}/>
+            <Dialog id={elem.id} name={elem.name} key={elem.id}/>
         )
     });
     const FillMessages = props.messages.map(elem => {
         return (
-            <Message message={elem.message}/>
+            <Message message={elem.message} key={elem.id}/>
         )
     });
 

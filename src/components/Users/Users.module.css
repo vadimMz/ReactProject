@@ -1,0 +1,62 @@
+.Users {
+    border: black;
+    margin: 10px;
+    display: grid;
+    width: 100%;
+
+    grid-template-areas: "avafio statusfollowed";
+    grid-template-columns: 120px 7fr;
+}
+
+.avafio {
+    margin: 10px;
+    grid-area: avafio;
+    background: burlywood;
+
+}
+
+.statusfollowed {
+    display: grid;
+    width: 100%;
+
+    grid-template-areas: "status followBtn";
+    grid-template-rows: 150px 2fr;
+    grid-template-columns: 10fr 1fr;
+
+}
+
+.ava {
+    width: 120px;
+    height: 100px;
+}
+
+.ava img {
+    width: 90px;
+    height: 90px;
+
+}
+
+.fio {
+    text-align: center;
+}
+
+.status {
+    grid-area: status;
+    border: solid black;
+}
+
+.status span {
+    margin: 10px;
+}
+
+.followBtn {
+    grid-area: followBtn;
+    padding: 10px;
+}
+.followBtn button{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+

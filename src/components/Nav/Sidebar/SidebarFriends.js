@@ -6,7 +6,7 @@ import Post from "../../profile/MyPosts/Post/Post";
 
 function SidebarFriends(props) {
 
-    let FillSidebarFriends = props.state.sidebar.friends.map(elem => <SidebarItemFriend name={elem.name}/>);
+    let FillSidebarFriends = props.state.sidebar.friends.map(elem => <SidebarItemFriend name={elem.name} key={elem.id}/>);
     return (
         <div className={styles.sidebar}>
             {FillSidebarFriends}
