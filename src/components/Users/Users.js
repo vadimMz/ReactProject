@@ -34,7 +34,7 @@ const Users = (props) => {
                 </div>
 
                 <div className={styles.followBtn}>
-                    <button ref={followBtn} onClick={onClickFollowBtn}>{FollowStatus}</button>
+                    <button ref={followBtn} onClick={onClickFollowBtn}>{FollowStatus()}</button>
                 </div>
             </div>
         </div>

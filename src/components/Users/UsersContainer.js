@@ -9,17 +9,6 @@ let mapDispatchToProps = (dispatch) => {
         ChangeFollowStatus: (id, followStatus) => {
             let action = ChangeFollowStatusAC(id, followStatus);
             dispatch(action);
-
-            /*
-            DoFollow: (id) => {
-                let action = DoFollowActionCreator(id);
-                dispatch(action);
-            },
-            DoUnfollow: (id) => {
-                let action = DoUnfollowActionCreator(id);
-                dispatch(action)
-            }
-            */
         }
     }
 }
